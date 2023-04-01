@@ -25,3 +25,8 @@ __WEAK void sdk_init()
 {
     // Do nothing
 }
+
+void _close_r(void) {}
+void _lseek_r(void) {}
+void _read_r(void) {}
+void _write_r(void) {}

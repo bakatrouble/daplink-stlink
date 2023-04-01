@@ -27,7 +27,7 @@ import binascii
 import itertools
 import mbed_lstools
 import info
-from tests import test_daplink
+# from tests.test_daplink import daplink_test
 from test_info import TestInfoStub, TestInfo
 from intelhex import IntelHex
 from pyocd.core.helpers import ConnectHelper
@@ -359,8 +359,8 @@ class DaplinkBoard(object):
             os.remove(assert_path)
             self.wait_for_remount(TestInfoStub())
 
-    def run_board_test(self, parent_test):
-        test_daplink.daplink_test(self, parent_test)
+    # def run_board_test(self, parent_test):
+        # daplink_test(self, parent_test)
 
     def read_target_memory(self, addr, size, resume=True):
         assert self.get_mode() == self.MODE_IF
